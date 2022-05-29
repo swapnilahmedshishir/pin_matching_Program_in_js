@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input class="form-control" type="text" value="" id="genaretInputFiled">
+                    <button class="generate-btn" onclick="genaretBtn()">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input class="form-control" id="calc_input" value="" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div class="button" onclick="validInputDigit('7')">7</div>
+                              <div class="button" onclick="validInputDigit('8')">8</div>
+                              <div class="button" onclick="validInputDigit('9')">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button" onclick="validInputDigit('4')">4</div>
+                              <div class="button" onclick="validInputDigit('5')">5</div>
+                              <div class="button" onclick="validInputDigit('6')">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button" onclick="validInputDigit('1')">1</div>
+                              <div class="button" onclick="validInputDigit('2')">2</div>
+                              <div class="button" onclick="validInputDigit('3')">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button" onclick="oneByOneClear()">&lt;</div>
+                                <div class="button" onclick="validInputDigit('0')">0</div>
+                                <div class="button" onclick="allClearBtn()">C</div>
+                            </div>
+                            <div>
+                                <button type="submit" class="submit-btn" onclick="submiteBtn()">Submit</button>
+                                <p class="action-left"><span id="try_again">3</span> try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p class="notify" id="notify_false">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify" id="notify_true">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+    <!-- js file  -->
+    <script src="index.js"></script>
+</body>
+</html>
